@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor con Corazones y Animación</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-image: url('https://previews.123rf.com/images/tereeez/tereeez1803/tereeez180300008/96888536-aviones-de-papel-de-patrones-sin-fisuras-con-corazones-amor-vector-de-concepto-de-san-valent%C3%ADn.jpg');
+            background-repeat: repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .envelope {
+            width: 300px;
+            padding: 20px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            margin: 20px;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+            max-width: 100%;
+        }
+        
+        .envelope:before,
+        .envelope:after {
+            content: '';
+            position: absolute;
+            top: 15px;
+            bottom: 15px;
+            width: 100%;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.1) 100%);
+            pointer-events: none;
+            z-index: -1;
+            transition: opacity 0.3s;
+            border-radius: 10px;
+        }
+        
+        .envelope:before {
+            left: -4px;
+            right: -4px;
+            transform: rotate(45deg);
+        }
+        
+        .envelope:after {
+            left: -4px;
+            right: -4px;
+            transform: rotate(-45deg);
+        }
+        
+        .heart-button {
+            cursor: pointer;
+            display: inline-block;
+            margin-bottom: 10px;
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: black;
+            z-index: 1;
+        }
+        
+        .heart {
+            font-size: 40px;
+            color: red;
+            position: relative;
+            z-index: 0;
+        }
+        
+        .open-text {
+            font-size: 18px;
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+        
+        .letter {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 10px;
+            display: none;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+        
+        .heart-animation {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            opacity: 0.8;
+            animation: heart-float 5s ease-in-out forwards;
+            z-index: 0;
+        }
+        
+        @keyframes heart-float {
+            0% {
+                transform: translateY(0) scale(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-50px) scale(1.5);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-100px) scale(0);
+                opacity: 0;
+            }
+        }
+        
+        .rosa-claro {
+            background-color: #ff0066;
+        }
+        
+        @media (max-width: 768px) {
+            .envelope {
+                width: calc(100% - 40px);
+                max-width: 300px;
+            }
+        }
+        
+        .hidden-image {
+            max-width: calc(100% - 40px);
+            max-height: 200px;
+            border: 5px solid red;
+            border-radius: 10px;
+            margin: 10px auto;
+            display: none;
+        }
+        
+        .btn-imagen {
+            background-color: #ffc0cb !important;
+            color: black !important;
+        }
+        
+        #blue-hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="envelope rosa-claro">
+            <div class="heart-button" onclick="toggleCarta(this)">
+                <span class="heart">&#10084;</span>
+                <span class="open-text">Abrir</span>
+            </div>
+            <div class="letter">
+                <p>Naty</p>
+                <p>Oliiii oliiii natyyy otra vez aquí con una cartaa en que yooo creee por Internet Esperooo si se veaa biennnn jsjsjs primerooo yo se queeee se te hace raro platicar conmigo después de todo lo que pasooo los regalos los chistes y cosas por
+                    el estilo peroooo a la vez siento queeee desde un principio pude haberte dicho lo que en realiadad sentia anteriormente y es queeee recuerdas el collar del avión que te regalé antes de irme yo quize que fueras feliz con alguien más
+                    sabess y yo mientras estaba en la uni los dias se me pasaban eternos por los trabajos y cosas nuevas la vdd cuando llego la temporada de las flores amarillas me acorde de tiii y apartir de ese diaaaa te seguí regalando pequeños detalles
+                    y es que un diaaa tuveeee unaa platicaaaa con un amigo y el tenía razón en una cosa si quieres a alguien no la dejes ir sin por lo menos intentando y yo se que has tenido más relaciones y recuerdas cuando me decías que no eras una
+                    buena persona por cosas que habías hecho la vdd no todos somos unos santos cada quien tuvo su historia yo igual pude haberte dicho lo mismo peroo sabes algoo yo se que a lo mejor y sigo de insistente sabes no seeee yo mismo lo siento
+                    perooo dabes algo sigo haciéndolo en el simple hecho de nunca decirte nadaaa en el sentido de que las veces que te he mandado regalos nunca te he dicho cosasss concretas de vdd y es mass se quee no puedo forzar algo por solo simplemente
+                    mandarte regalos y que te sientas con la obligación de escribirme o decirme cosass también se que en la escuela también los amigos de Goretti puede que pienses que no quieres que sean que te mando regalos y te entiendo yo se que dirás
+                    por que te digo todo esto y es por mi sabes es que este viernes pensaba ir al coleeee y te soy sincero no se de que manera verteee o incluso saludarte te acuerdas del último regalo de tu cumple hay cuando me dijiste que pronto estaremos
+                    juntos perooo no entendí esaaa partee sabesss y no se que me pasa cuando es algo que tenga que ver contigo se me van todas las palabras que tengo oara decirte desde un principio si sabias jajajaj y es queeee sabes por que sigo tratando
+                    de que siempre estes feliz es queee eres la única niña que me dio su apoyo en el aspecto de que tienes una personalidad que no he visto en otras niñas y esa es la razón por que me gusta darte siempre regalos y miraaa saes una cosa
+                    con lo que me digas entenderé que onda vdd y también se que hay mas chavos a los cuales te llaman la atención y yo solo soy un impedimento para que no lo lleves acabo peroo yo solo soy un simple chico que se preocupa por que estés
+                    bien y sii también a sido un poco mi culpa por siempre revolverte en tus emociones perooo solo era esooo por si te veia en la escuela para que te pueda saludarrr eso era lo que no me dejaba dormir jsjsj y esooo es todoo Te quieroooo
+                    <3 y espero te allá gustado la página ese link lo puedo modicar muchas vecesss más para que no se quede escrito en la misma cartaaa </p>
+                        <p>Con todo mi cariño,</p>
+                        <p>[FER]</p>
+                        <button class="btn btn-warning btn-imagen" onclick="showImage(this)">Imagen</button>
+                        <img class="hidden-image img-fluid" src="data:image/jpeg;base64,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"
+                            style="display: none;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor para los corazones azules -->
+    <div id="blue-hearts-container"></div>
+
+    <!-- Bootstrap JS y jQuery (opcional para algunos componentes) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function toggleCarta(button) {
+            var carta = button.parentElement.querySelector('.letter');
+
+            if (carta.style.display === 'block') {
+                carta.style.display = 'none';
+            } else {
+                carta.style.display = 'block';
+            }
+        }
+
+        function showImage(button) {
+            var carta = button.parentElement;
+            var img = carta.querySelector('.hidden-image');
+
+            if (img.style.display === 'none') {
+                img.style.display = 'block';
+            } else {
+                img.style.display = 'none';
+            }
+        }
+
+        // Función para generar corazones flotantes rojos
+        function animateHearts() {
+            var envelope = document.querySelector('.envelope');
+
+            envelope.addEventListener('click', function() {
+                var carta = this.querySelector('.letter');
+
+                // Limpiar corazones existentes dentro de la carta
+                var hearts = carta.querySelectorAll('.heart-animation');
+                hearts.forEach(function(heart) {
+                    heart.remove();
+                });
+
+                // Generar nuevos corazones dentro de la carta
+                for (var i = 0; i < 5; i++) {
+                    var size = Math.random() * 60 + 20; // Tamaño aleatorio entre 20 y 80
+                    var heart = document.createElement('div');
+                    heart.classList.add('heart-animation');
+                    heart.innerHTML = '&#10084;'; // Corazón rojo grande
+                    heart.style.color = getRandomColor(); // Color aleatorio para el corazón
+                    heart.style.fontSize = size + 'px'; // Tamaño aleatorio
+                    // Posicionamiento aleatorio dentro de la carta
+                    heart.style.left = Math.random() * 100 + '%';
+                    heart.style.top = Math.random() * 100 + '%';
+                    carta.appendChild(heart);
+                    // Eliminar corazones después de 5 segundos
+                    setTimeout(function() {
+                        heart.remove();
+                    }, 5000);
+                }
+            });
+        }
+
+        // Función para obtener un color aleatorio para los corazones rojos
+        function getRandomColor() {
+            var colors = ['#FF69B4', '#FF1493', '#C71585', '#DA70D6']; // Colores rosa y rojo
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        // Llamar a la función para iniciar la animación al cargar la página
+        window.onload = function() {
+            animateHearts(); // Iniciar animación de corazones
+        };
+    </script>
+</body>
+
+</html>
